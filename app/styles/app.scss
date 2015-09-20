@@ -1,0 +1,21 @@
+@import 'ember-paper';
+@import 'header';
+@import 'column';
+@import 'card';
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+body > .ember-view {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+[layout-fill] {
+  flex-grow: 1;
+}

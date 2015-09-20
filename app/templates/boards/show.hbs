@@ -1,0 +1,5 @@
+<div class="app-layout" layout="column" layout-fill>
+  <div class="header"><h1>{{model.title}}</h1></div>
+  {{board-component model=model createCard="createCard"}}
+  {{outlet}}
+</div>

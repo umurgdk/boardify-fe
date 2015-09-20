@@ -1,0 +1,84 @@
+.card-wrapper {
+  padding: 16px;
+}
+
+.card-item {
+  border-radius: 4px;
+  padding: 16px;
+  padding-bottom: 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  color: #fff;
+  min-height: 48px;
+
+  .card-stats {
+    margin: 10px -8px 0;
+    height: 35px;
+    /*background: rgba(0,0,0,0.1);*/
+
+    .stat-button {
+      height: 30;
+      padding: 4px 8px;
+      cursor: pointer;
+      float: left;
+
+      .paper-icon {
+        color: rgba(#000,0.2);
+      }
+
+      &:hover .paper-icon {
+        color: #fff;
+        text-shadow: 0 2px 2px rgba(#000, 0.2);
+      }
+
+      span {
+        color: rgba(#fff,0.7);
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.empty-card {
+  margin: 16px;
+  background: #fff;
+  color: #444;
+
+  .actions {
+    margin: -16px;
+    padding: 0 8px 8px;
+    text-align: right;
+  }
+}
+
+.cards {
+  .draggable-object-target {
+    margin: -16px 0;
+    height: 16px;
+    opacity: 0;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+
+    .placeholder {
+      display: none;
+      padding: 16px;
+      pointer-events: none;
+      border: 1px dashed #ccc;
+      border-radius: 4px;
+      color: #777;
+      text-align: center;
+      background: rgba(0,0,0,0.05);
+    }
+
+    &.accepts-drag {
+      opacity: 1;
+      padding: 16px;
+      height: auto;
+
+      .placeholder {
+        display: block;
+      }
+    }
+  }
+}

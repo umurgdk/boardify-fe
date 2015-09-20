@@ -1,0 +1,34 @@
+{{#draggable-object-target action="moveCard" content=model}}
+<div class="column-title clear">
+  <h2>
+    {{model.title}}
+  </h2>
+  <div class="actions">
+    {{#paper-button primary="true" icon-button="true" action="newCard"}}
+    {{paper-icon icon="add"}}
+    {{/paper-button}}
+  </div>
+</div>
+{{#if emptyCard}}
+<div class="card-item empty-card">
+  {{paper-input textarea=true label="Enter you card's title..." value=emptyCard.title}}
+  <div class="actions">
+    {{#paper-button action="cancel"}}Cancel{{/paper-button}}
+    {{#paper-button action="createCard" primary="true"}}Save{{/paper-button}}
+  </div>
+</div>
+{{/if}}
+<div class="cards">
+  {{#each sortedCards as |card|}}
+    {{#draggable-object-target action="moveCard" content=card}}
+      <div class="placeholder">Move Here</div>
+    {{/draggable-object-target}}
+    <div class="card-wrapper">
+      {{#draggable-object content=card}}
+      {{card-item model=card columnColor=model.color}}
+      {{/draggable-object}}
+    </div>
+  {{/each}}
+</div>
+{{yield}}
+{{/draggable-object-target}}

@@ -1,0 +1,6 @@
+{{#each orderedColumns as |column|}}
+  <div class="column-wrapper" layout="column" layout-fill>
+    {{column-item model=column createCard="createCard"}}
+  </div>
+{{/each}}
+{{yield}}
