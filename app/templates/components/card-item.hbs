@@ -3,7 +3,7 @@
     {{model.title}}
   </div>
   <div class="card-stats">
-    <div class="stat-button">
+    <div class="stat-button" {{action "voteUp" on="click"}}>
       {{paper-icon icon="thumb-up" size="sm"}} 
       <span>{{model.votes}}</span>
     </div>
