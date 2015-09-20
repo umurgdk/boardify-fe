@@ -13,8 +13,8 @@ export default Ember.Route.extend({
       const cards = column.get('cards');
       const card = this.store.createRecord('card', {
         title: title,
-        votes: 0,
-        order: 0
+        order: 0,
+        board: column.get('board')
       });
 
       cards.insertAt(0, card);
